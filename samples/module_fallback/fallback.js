@@ -13,7 +13,7 @@ const server = createServer((req, res) => {
   const url = new URL(req.url, "http://example.org");
   const specifier = url.searchParams.get('specifier');
   const referrer = url.searchParams.get('referrer');
-  console.log(specifier, referrer);
+  console.log('%s %s', specifier, referrer);
 
   // The fallback service can tell the client to map the request
   // specifier to another specifier using a 301 redirect, using
